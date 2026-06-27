@@ -1,0 +1,10 @@
+{
+  "iconDefinitions": {
+    "_folio_file": {
+      "iconPath": "../images/folio-file.svg"
+    }
+  },
+  "fileExtensions": {
+    "folio": "_folio_file"
+  }
+}

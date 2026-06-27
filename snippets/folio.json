@@ -1,0 +1,109 @@
+{
+    "Portfolio": {
+        "prefix": "portfolio",
+        "body": [
+            "portfolio \"${1:Seu Nome}\" {",
+            "  metadata {",
+            "    lang \"${2:pt-BR}\"",
+            "    favicon \"${3:https://exemplo.com/favicon.png}\"",
+            "  }",
+            "",
+            "  design \"${4:Principal}\" {",
+            "    accent \"${5:#7c3aed}\"",
+            "  }",
+            "",
+            "  hero \"${6:Apresentação}\" {",
+            "    title \"${7:Seu Nome}\"",
+            "    subtitle \"${8:Desenvolvedor Full Stack}\"",
+            "    description \"${9:Construo produtos web de ponta a ponta.}\"",
+            "    image \"${10:https://i.pravatar.cc/480}\"",
+            "    link \"${11:mailto:email@email.com}\"",
+            "  }",
+            "}"
+        ],
+        "description": "Cria uma estrutura completa de portfólio FolioLang"
+    },
+    "Metadata": {
+        "prefix": "metadata",
+        "body": [
+            "metadata {",
+            "  lang \"${1:pt-BR}\"",
+            "  favicon \"${2:https://exemplo.com/favicon.png}\"",
+            "}"
+        ],
+        "description": "Cria o bloco de metadados do portfólio"
+    },
+    "Design": {
+        "prefix": "design",
+        "body": [
+            "design \"${1:Principal}\" {",
+            "  ink \"${2:#0a0a0a}\"",
+            "  line \"${3:#e5e5e5}\"",
+            "  text \"${4:#171717}\"",
+            "  muted \"${5:#737373}\"",
+            "  accent \"${6:#7c3aed}\"",
+            "}"
+        ],
+        "description": "Cria o bloco de design (paleta de cores)"
+    },
+    "Hero": {
+        "prefix": "hero",
+        "body": [
+            "hero \"${1:Apresentação}\" {",
+            "  title \"${2:Seu Nome}\"",
+            "  subtitle \"${3:Desenvolvedor Full Stack}\"",
+            "  description \"${4:Construo produtos web de ponta a ponta.}\"",
+            "  image \"${5:https://i.pravatar.cc/480}\"",
+            "  link \"${6:mailto:email@email.com}\"",
+            "}"
+        ],
+        "description": "Cria uma seção hero"
+    },
+    "About": {
+        "prefix": "about",
+        "body": [
+            "about \"${1:Sobre}\" {",
+            "  title \"${2:Sobre mim}\"",
+            "  description \"${3:Escreva uma breve descrição sobre você.}\"",
+            "}"
+        ],
+        "description": "Cria uma seção sobre"
+    },
+    "Projects": {
+        "prefix": "projects",
+        "body": [
+            "projects \"${1:Projetos}\" {",
+            "  project \"${2:Nome do Projeto}\" {",
+            "    title \"${3:Nome do Projeto}\"",
+            "    description \"${4:Descrição curta do projeto.}\"",
+            "    image \"${5:https://exemplo.com/projeto.png}\"",
+            "    link \"${6:https://github.com/seu-usuario/projeto}\"",
+            "  }",
+            "}"
+        ],
+        "description": "Cria uma seção de projetos"
+    },
+    "Project": {
+        "prefix": "project",
+        "body": [
+            "project \"${1:Nome do Projeto}\" {",
+            "  title \"${2:Nome do Projeto}\"",
+            "  description \"${3:Descrição curta do projeto.}\"",
+            "  image \"${4:https://exemplo.com/projeto.png}\"",
+            "  link \"${5:https://github.com/seu-usuario/projeto}\"",
+            "}"
+        ],
+        "description": "Cria um projeto"
+    },
+    "Contact": {
+        "prefix": "contact",
+        "body": [
+            "contact \"${1:Contato}\" {",
+            "  title \"${2:Vamos conversar}\"",
+            "  description \"${3:Entre em contato comigo.}\"",
+            "  link \"${4:mailto:email@email.com}\"",
+            "}"
+        ],
+        "description": "Cria uma seção de contato"
+    }
+}

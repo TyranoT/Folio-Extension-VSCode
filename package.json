@@ -1,0 +1,53 @@
+{
+  "name": "foliolang",
+  "displayName": "FolioLang Portfolio DSL",
+  "description": "Syntax highlighting and language support for FolioLang portfolio files.",
+  "version": "0.0.4",
+  "publisher": "TyranoT",
+  "icon": "images/logo.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TyranoT/Folio-Extension-VSCode"
+  },
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "folio",
+        "aliases": [
+          "Folio",
+          "folio"
+        ],
+        "extensions": [
+          ".folio"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "folio",
+        "scopeName": "source.folio",
+        "path": "./syntaxes/folio.tmLanguage.json"
+      }
+    ],
+    "iconThemes": [
+      {
+        "id": "foliolang-icons",
+        "label": "FolioLang Icons",
+        "path": "./fileicons/folio-icon-theme.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "folio",
+        "path": "./snippets/folio.json"
+      }
+    ]
+  }
+}

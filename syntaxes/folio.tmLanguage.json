@@ -1,0 +1,84 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Folio",
+	"scopeName": "source.folio",
+	"patterns": [
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#blocks"
+		},
+		{
+			"include": "#properties"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#punctuation"
+		}
+	],
+	"repository": {
+		"comments": {
+			"patterns": [
+				{
+					"name": "comment.line.number-sign.folio",
+					"match": "#.*$"
+				}
+			]
+		},
+		"blocks": {
+			"patterns": [
+				{
+					"comment": "Block keyword followed by an optional \"label\" and an opening brace",
+					"match": "\\b(portfolio|metadata|design|hero|about|projects|contact)\\b(?=\\s*(\"[^\"]*\")?\\s*\\{)",
+					"name": "keyword.control.block.folio"
+				}
+			]
+		},
+		"properties": {
+			"patterns": [
+				{
+					"comment": "Property key preceding a \"value\" string (not an opening block)",
+					"match": "\\b(title|subtitle|description|image|link|lang|favicon|author|keywords|viewport|charset|ink|line|text|muted|accent)\\b(?=\\s*\"[^\"]*\"\\s*(?!\\{))",
+					"name": "support.type.property-name.folio"
+				},
+				{
+					"comment": "Any other word used as a key before a \"value\"",
+					"match": "\\b([A-Za-z_]\\w*)\\b(?=\\s*\"[^\"]*\")",
+					"name": "variable.other.property.folio"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.folio",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"comment": "Hex color value",
+					"match": "#[0-9A-Fa-f]{3,8}\\b",
+					"name": "constant.other.color.rgb-value.folio"
+				},
+				{
+					"comment": "URL inside a string",
+					"match": "\\b(https?|mailto|tel|ftp)://?[^\\s\"]*",
+					"name": "markup.underline.link.folio"
+				}
+			]
+		},
+		"punctuation": {
+			"patterns": [
+				{
+					"name": "punctuation.section.block.begin.folio",
+					"match": "\\{"
+				},
+				{
+					"name": "punctuation.section.block.end.folio",
+					"match": "\\}"
+				}
+			]
+		}
+	}
+}
